@@ -11,6 +11,12 @@ form.addEventListener("submit", (e) => {
       }, 2000);
     }
   });
+  if (!document.querySelector('.conact__message').value) {
+    document.querySelector('.conact__message').parentElement.classList.add("error-input");
+    setTimeout(() => {
+      document.querySelector('.conact__message').parentElement.classList.remove("error-input");
+    }, 2000);
+  }
   const val = emailInput.value.split("");
   console.log(val.includes("@"));
   if (!val.includes("@")) {
