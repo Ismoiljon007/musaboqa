@@ -1,5 +1,17 @@
 @mixin media($w) {
-    @media (max-width: $w) {
-        @content;
-    }
+  @media (max-width: $w) {
+    @content;
+  }
+}
+@mixin title {
+  font-weight: 700;
+  font-size: 88px;
+  line-height: 1;
+  letter-spacing: -2.5px;
+  @include media(945px) {
+    font-size: 72px;
+  }
+  @include media(720px) {
+    font-size: 40px;
+  }
 }
